@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: url('IMAGES/Forgot\ Password.jpg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav {
+    background-color: darkred;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 25px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+}
+.logo { font-size: 22px; letter-spacing: 2px; }
+.navlinks ul { list-style: none; }
+.navlinks ul li { display: inline-block; margin: 0 15px; }
+.navlinks ul li a { text-decoration: none; color: white; font-size: 16px; }
+.navlinks ul li a:hover { text-decoration: underline; }
+
+.page-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+}
+
+.forgot-container {
+    background: rgba(145, 65, 65, 0.85);
+    padding: 2.5rem;
+    width: 400px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 1s ease-in-out;
+}
+
+.forgot-container h2 {
+    text-align: center;
+    color: #fff;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    animation: slideUp 1s ease forwards;
+}
+
+label {
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 8px;
+    display: block;
+}
+input[type="email"],
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 25px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+input[type="email"]:focus,
+input[type="text"]:focus,
+input[type="password"]:focus {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+    transform: scale(1.03);
+}
+
+.btn {
+    width: 100%;
+    background-color: #94200b;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+.btn:hover {
+    background-color: #c02d16;
+    transform: scale(1.05);
+}
+
+p {
+    color: #fff;
+    text-align: center;
+    margin-top: 15px;
+}
+p a {
+    color: #ffd6d6;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+p a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+@keyframes slideUp {
+    from {opacity: 0; transform: translateY(25px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+@media (max-width: 500px) {
+    .forgot-container {
+        width: 90%;
+        padding: 2rem;
+    }
+}

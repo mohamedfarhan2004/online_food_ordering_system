@@ -1,0 +1,129 @@
+* { 
+  box-sizing: border-box; 
+  margin:0; 
+  padding:0; 
+  font-family: Arial, Helvetica, sans-serif; 
+}
+
+.nav { 
+  background-color: darkred; 
+  color: white; display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  padding: 8px 25px; 
+  box-shadow: 0 3px 10px rgba(0,0,0,0.3); 
+}
+
+.logo { 
+  font-size: 22px; 
+  cursor: pointer; 
+  letter-spacing:2px; 
+  transition: 0.3s; 
+}
+
+.logo:hover { 
+  transform: scale(1.1); 
+}
+
+.navlinks ul { 
+  list-style: none; 
+}
+
+.navlinks ul li { 
+  display: inline-block; 
+  margin: 0 15px; 
+}
+
+.navlinks ul li a { 
+  text-decoration:none; 
+  color:white; 
+  font-size:17px; 
+  position:relative; 
+  transition:0.3s; 
+}
+
+.navlinks ul li a:hover { 
+  color: #ffcccb; 
+}
+
+.navlinks ul li a::after { content:""; 
+  position:absolute; 
+  left:0; 
+  bottom:-5px; width:0; height:2px; 
+  background:blue; 
+  transition: width 0.3s ease; 
+}
+
+.navlinks ul li a:hover::after { 
+  width:100%; 
+}
+
+.container {
+  background-image: url("./IMAGES/Login.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  min-height: calc(100vh - 70px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: white;
+}
+
+@keyframes fadeIn { from {opacity:0; transform: translateY(30px);} to {opacity:1; transform: translateY(0);} }
+
+.login-form {
+  background-color: rgba(255, 255, 255, 0.3);
+  border: 2px solid rgba(255,0,0,0.5);        
+  backdrop-filter: blur(8px);
+  width: 400px;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+  text-align: center;
+  animation: slideUp 1s ease-out;
+}
+
+@keyframes slideUp { from {transform: translateY(40px); opacity:0;} to {transform: translateY(0); opacity:1;} }
+
+.login-form h2 { color: red; margin-bottom:25px; font-size:28px; letter-spacing:1px; }
+
+input[type=text], input[type=email], input[type=password] {
+  width: 100%;
+  padding: 10px;
+  margin:10px 0 20px 0;
+  border-radius:8px;
+  border:none;
+  outline:none;
+  transition:0.3s;
+  background-color: gainsboro;
+}
+input:focus { box-shadow:0 0 10px crimson; transform: scale(1.02); }
+
+.login {
+  background-color: crimson;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  cursor:pointer;
+  width:100%;
+  font-weight:bold;
+  color:white;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  font-size:15px;
+  transition:0.3s;
+}
+.login:hover { background-color: greenyellow; transform: scale(1.05); box-shadow: 0 0 15px green; }
+
+.forget { display:flex; justify-content: space-between; margin-top:20px; }
+.forget a { color: crimson; text-decoration:none; font-weight:bold; transition:0.3s; }
+.forget a:hover { color: greenyellow; text-decoration: underline; }
+
+.error { color:#d8000c; background:#ffd2d2; padding:10px; border-radius:10px; margin-bottom:15px; font-weight:bold; text-align:center; }
